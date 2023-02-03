@@ -4,6 +4,6 @@ The app has multiple components. First, I created a Solidity ERC20 smart contrac
 
 To use the app, one needs to install Metamask to their browser and connect it to the Goerli Ethereum testnet. 
 
-The smart contract can be viewed on the Goerli Testnet Explorer at the following website:https://goerli.etherscan.io/address/0x87AbaAD3F371650E012bbeA2BB4396Ff1E9914Ed
+The smart contract can be viewed on the Goerli Testnet Explorer at the following website: https://goerli.etherscan.io/address/0x87AbaAD3F371650E012bbeA2BB4396Ff1E9914Ed
 
 The app can be accessed at the following website: https://moon-token.netlify.app/
