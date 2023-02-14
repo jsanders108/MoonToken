@@ -17,11 +17,10 @@ export default function KeyStats(){
    
     const connectMetamask = async ()=> {
         if(window.ethereum !== "undefined"){
-          const accounts = await ethereum.request({method: "eth_requestAccounts"});
-          setAccount(accounts[0]); 
+          const accounts = await ethereum.request({method: "eth_requestAccounts"})
+          setAccount(accounts[0])
         }
       }
-      
       
       const getData = async () => {
         const Address = "0x87AbaAD3F371650E012bbeA2BB4396Ff1E9914Ed"; 
@@ -301,24 +300,22 @@ export default function KeyStats(){
                 "stateMutability": "nonpayable",
                 "type": "function"
               }
-            ];
-        const provider = new ethers.providers.Web3Provider(window.ethereum); 
-        const signer = provider.getSigner(); 
-        let contract = new ethers.Contract(Address, ABI, signer); 
-        const tokenName = await contract.name();
-        setName(tokenName);
-        console.log(tokenName)
-        const tokenSymbol = await contract.symbol();
+            ]
+        const provider = new ethers.providers.Web3Provider(window.ethereum)
+        const signer = provider.getSigner()
+        let contract = new ethers.Contract(Address, ABI, signer)
+        const tokenName = await contract.name()
+        setName(tokenName)
+        const tokenSymbol = await contract.symbol()
         setSymbol(tokenSymbol);
-        const tokenDecimals = await contract.decimals();
-        setDecimals(tokenDecimals);
-        const totalSupply = await contract.totalSupply();
+        const tokenDecimals = await contract.decimals()
+        setDecimals(tokenDecimals)
+        const totalSupply = await contract.totalSupply()
         const adjustedNum = totalSupply / 10**18
-        setTotalSupply(adjustedNum.toLocaleString());
+        setTotalSupply(adjustedNum.toLocaleString())
         setDisplayAddress(contract.address)
       }
 
-    
     return (
         <div>
             <div className="main-connect-wrapper">
